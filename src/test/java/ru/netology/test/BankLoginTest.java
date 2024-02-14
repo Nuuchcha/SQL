@@ -7,6 +7,7 @@ import ru.netology.page.LoginPage;
 
 import static com.codeborne.selenide.Selenide.open;
 import static ru.netology.data.DataHelper.*;
+import static ru.netology.data.SQLHelper.cleanAuthCodes;
 import static ru.netology.data.SQLHelper.cleanDatabase;
 
 public class BankLoginTest {
@@ -14,10 +15,7 @@ public class BankLoginTest {
     
     @AfterEach
     void tearDown(){
-        cleanAutoCodes();
-    }
-
-    private void cleanAutoCodes() {
+        cleanAuthCodes();
     }
 
     @AfterAll
